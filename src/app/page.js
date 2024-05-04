@@ -3,31 +3,26 @@ import React from "react";
 export default function Home() {
   return (
     <div className="flex h-screen bg-gray-100">
-      <div className="w-1/6 bg-black text-white flex flex-col justify-between">
-        <div className="p-6">
-          <h2 className="text-lg mb-4">
-            <b>MAIN MENU</b>
-          </h2>
-          <ul>
-            <li className="mb-2 relative hover:bg-gray-300 hover:text-black rounded transition-colors duration-200">
-              Notification
-              <span className="text-xs absolute top-0 right-0 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center">
-                22
-              </span>
-            </li>
-            <li className="mb-2 hover:bg-gray-300 hover:text-black rounded transition-colors duration-200">
-              Ticket
-            </li>
-          </ul>
-        </div>
-        <hr className="border-gray-300 mb-[-525px]" />
-        <a
-          className="p-6 hover:bg-gray-300 hover:text-black rounded transition-colors duration-200"
-          href="/logout"
-        >
-          Logout
-        </a>
+    <div className="w-1/6 bg-black text-white flex flex-col justify-between">
+      <div className="p-6">
+        <h2 className="text-lg mb-4">
+          <b>MAIN MENU</b>
+        </h2>
+        <ul>
+          <li className="mb-2 relative hover:bg-gray-300 hover:text-black rounded transition-colors duration-200">
+            Notification
+            <span className="text-xs absolute top-0 right-0 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center">
+              22
+            </span>
+          </li>
+          <li className="mb-2 hover:bg-gray-300 hover:text-black rounded transition-colors duration-200">Ticket</li>
+        </ul>
       </div>
+      <hr className="border-gray-300 mb-[-525px]" />
+      <a className="p-6 hover:bg-gray-300 hover:text-black rounded transition-colors duration-200" href="/logout">
+        Logout
+      </a>
+    </div>
       <div className="w-5/6 flex flex-col">
         <div className="px-6 mt-4">
           <div className="flex justify-between items-center mb-6">
@@ -35,7 +30,7 @@ export default function Home() {
               className="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
               type="search"
               name="search"
-              placeholder="Search..."
+              placeholder="Search"
             />
             <div className="flex items-center">
               <div className="w-10 h-10 rounded-full bg-blue-500 mr-4"></div>
@@ -57,12 +52,6 @@ export default function Home() {
         <div className="p-6 flex flex-1 flex-col">
           <div className="flex flex-1">
             <div className="w-1/4 p-4">
-              <input
-                className="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none mb-4"
-                type="search"
-                name="search"
-                placeholder="Search..."
-              />
               {[...Array(9)].map((_, i) => (
                 <div key={i} className="flex items-center mb-4 relative">
                   <div className="w-10 h-10 rounded-full bg-blue-500 mr-4"></div>
